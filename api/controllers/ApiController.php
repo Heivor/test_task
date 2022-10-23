@@ -36,7 +36,7 @@ class ApiController extends Controller
         } elseif ($num > 50 && $num <= 100) {
             $price = 400;
         }
-        Yii::$app->response->data = ['price3' =>  $price];
+        Yii::$app->response->data = ['price' =>  $price];
         Yii::$app->response->send();
         Yii::$app->end();
     }
