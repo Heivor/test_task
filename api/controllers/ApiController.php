@@ -30,11 +30,11 @@ class ApiController extends Controller
         $num = filter_var(Yii::$app->getRequest()->getQueryParam('num'), FILTER_SANITIZE_NUMBER_INT);
         $price = 0;
         if ($num <= 20) {
-            $price = 100;
-        } elseif ($num > 20 && $num <= 50) {
             $price = 200;
-        } elseif ($num > 50 && $num <= 100) {
+        } elseif ($num > 20 && $num <= 50) {
             $price = 300;
+        } elseif ($num > 50 && $num <= 100) {
+            $price = 400;
         }
         Yii::$app->response->data = ['price' =>  $price];
         Yii::$app->response->send();
